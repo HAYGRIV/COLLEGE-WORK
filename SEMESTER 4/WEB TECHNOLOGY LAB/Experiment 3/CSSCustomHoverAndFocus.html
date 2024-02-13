@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Hover and Focus Effect</title>
+<style>
+  /* Basic styling for navigation items */
+  ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+
+  li {
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: 1px;
+    border-color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+
+  /* Custom hover effect */
+  li:hover {
+    transform: translateY(-5px); /* Move the item 5px upward on hover */
+    cursor: pointer;
+  }
+
+  /* Custom focus effect */
+  li:focus {
+    outline: none; /* Remove default focus outline */
+    transform: translateY(-5px); /* Move the item 5px upward on focus */
+  }
+</style>
+</head>
+<body>
+
+<ul>
+  <li tabindex="0">Home</li> <!-- tabindex="0" makes it focusable -->
+  <li tabindex="0">About</li>
+  <li tabindex="0">Services</li>
+  <li tabindex="0">Contact</li>
+</ul>
+
+</body>
+</html>

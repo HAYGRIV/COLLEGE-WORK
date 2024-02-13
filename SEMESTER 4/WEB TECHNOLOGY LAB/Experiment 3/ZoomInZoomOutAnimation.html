@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoom In/Out Animation</title>
+<style>
+  ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+  }
+
+  .zoom {
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s; /* Apply transition effect to transform property */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    list-style-type: none;
+    margin-right: 20px;
+    color: white;
+  }
+
+  .zoom:hover {
+    transform: scale(1.2); /* Zoom in to 120% of original size on hover */
+  }
+
+  .zoom:focus {
+    outline: none; /* Remove default focus outline */
+    transform: scale(1.2); /* Zoom in to 120% of original size on focus */
+  }
+</style>
+</head>
+<body>
+<ul>
+    <div class="zoom" tabindex="0">Home</div> <!-- tabindex="0" makes it focusable -->
+    <div class="zoom" tabindex="0">About</div>
+    <div class="zoom" tabindex="0">Services</div>
+    <div class="zoom" tabindex="0">Contact</div>
+</ul>
+</body>
+</html>
