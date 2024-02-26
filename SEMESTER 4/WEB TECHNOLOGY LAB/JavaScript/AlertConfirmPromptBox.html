@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Boxes</title>
+</head>
+<body>
+
+<script>
+  // Alert Box
+  alert("This is an alert box!");
+
+  // Confirm Box
+  var result = confirm("Do you like JavaScript?");
+  if (result) {
+    alert("Great! JavaScript is awesome!");
+  } else {
+    alert("Oh no! Maybe JavaScript is not your favorite language.");
+  }
+
+  // Prompt Box
+  var name = prompt("What is your name?");
+  if (name != null && name != "") {
+    alert("Hello, " + name + "! Welcome to our website.");
+  } else {
+    alert("Hello, anonymous! Welcome to our website.");
+  }
+</script>
+
+</body>
+</html>
