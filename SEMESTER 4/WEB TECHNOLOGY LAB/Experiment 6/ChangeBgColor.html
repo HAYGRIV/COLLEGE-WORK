@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Background Color</title>
+  <style>
+    #targetElement {
+      width: 200px;
+      height: 200px;
+      background-color: #ccc; /* Initial background color */
+    }
+  </style>
+</head>
+<body>
+
+<div id="targetElement" onclick="changeBackgroundColor()"></div>
+
+<script>
+  function changeBackgroundColor() {
+    // Get the element by its ID
+    var element = document.getElementById("targetElement");
+
+    // Generate a random color
+    var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+    // Change the background color of the element
+    element.style.backgroundColor = randomColor;
+  }
+</script>
+
+</body>
+</html>
