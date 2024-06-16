@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="colorApp">
+<head>
+<meta charset="UTF-8">
+<title>AngularJS Textbox Color Change</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="ColorController">
+<label for="colorInput">Enter Color:</label>
+<input type="text" id="colorInput" ng-model="userColor" ng-style="{ 'background-color': userColor }">
+</div>
+
+<script>
+var app = angular.module('colorApp', []);
+
+app.controller('ColorController', function($scope) {
+$scope.userColor = ''; // Initial color value
+
+// You can add additional logic/validation if needed
+});
+</script>
+
+</body>
+</html>

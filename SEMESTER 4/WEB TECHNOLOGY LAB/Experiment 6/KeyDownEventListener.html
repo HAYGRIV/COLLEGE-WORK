@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Key Detection</title>
+</head>
+<body>
+
+<input type="text" id="myInput" placeholder="Type something and press Enter">
+
+<script>
+    // Define a function to handle the keydown event
+    function handleEnterKey(event) {
+        // Check if the pressed key is the "Enter" key
+        if (event.key === 'Enter') {
+            // Your desired action when Enter key is pressed
+            alert('Enter key pressed!');
+            // You can add further actions here, like submitting a form or performing a search
+        }
+    }
+
+    // Get the text input element by its id
+    const inputElement = document.getElementById('myInput');
+
+    // Add a keydown event listener to the input element
+    inputElement.addEventListener('keydown', handleEnterKey);
+</script>
+
+</body>
+</html>

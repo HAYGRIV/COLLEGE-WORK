@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>String Extraction</title>
+</head>
+<body>
+
+<input type="text" id="inputString" placeholder="Enter a string">
+<input type="number" id="numCharacters" placeholder="Number of characters to extract">
+<button onclick="extractCharacters()">Extract Characters</button>
+
+<script>
+    function extractCharacters() {
+        // Get the input string and number of characters from the input fields
+        const inputString = document.getElementById('inputString').value;
+        const numCharacters = parseInt(document.getElementById('numCharacters').value);
+
+        // Check if the input string is empty or the number of characters is not valid
+        if (inputString.trim() === '' || isNaN(numCharacters) || numCharacters <= 0) {
+            alert('Please enter a valid input string and a positive number of characters.');
+            return;
+        }
+
+        // Extract the specified number of characters from the input string
+        const extractedCharacters = inputString.slice(0, numCharacters);
+
+        // Display the extracted characters
+        alert('Extracted characters: ' + extractedCharacters);
+    }
+</script>
+
+</body>
+</html>
+

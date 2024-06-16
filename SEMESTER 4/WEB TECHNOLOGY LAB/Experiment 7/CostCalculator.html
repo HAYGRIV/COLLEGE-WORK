@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost Calculator</title>
+<style> body {
+font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<h1>Cost Calculator</h1>
+
+<form id="costForm">
+<label for="quantity">Quantity:</label>
+<input type="number" id="quantity" placeholder="Enter quantity" required>
+<br>
+
+<label for="unitPrice">Unit Price:</label>
+<input type="number" id="unitPrice" placeholder="Enter unit price" required>
+<br>
+
+<button type="button" onclick="calculateCost()">Calculate Cost</button>
+</form>
+<h2>Total Cost: $<span id="totalCost">0.00</span></h2>
+
+<script>
+function calculateCost() {
+// Get values from input fields
+var quantity = parseFloat(document.getElementById('quantity').value);
+var unitPrice = parseFloat(document.getElementById('unitPrice').value);
+
+// Check if inputs are valid numbers
+if (isNaN(quantity) || isNaN(unitPrice)) {
+alert('Please enter valid numbers for quantity and unit price.'); return;
+}
+
+// Calculate total cost
+var totalCost = quantity * unitPrice;
+
+// Update the total cost display document.getElementById('totalCost').innerText = totalCost.toFixed(2);
+}
+</script>
+</body>
+</html>

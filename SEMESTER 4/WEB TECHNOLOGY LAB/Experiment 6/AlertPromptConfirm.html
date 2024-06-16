@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dialog Boxes Demo</title>
+</head>
+<body>
+
+<script>
+    // Alert dialog box
+    alert("This is an alert dialog box. Click OK to continue.");
+
+    // Prompt dialog box
+    let userInput = prompt("Please enter your name:");
+    if (userInput !== null && userInput.trim() !== '') {
+        alert("Hello, " + userInput + "! Welcome to our website.");
+    } else {
+        alert("You did not enter your name. Welcome anyway!");
+    }
+
+    // Confirm dialog box
+    let confirmation = confirm("Are you sure you want to delete your account?");
+    if (confirmation) {
+        alert("Your account has been successfully deleted.");
+    } else {
+        alert("Your account deletion has been canceled.");
+    }
+</script>
+
+</body>
+</html>
